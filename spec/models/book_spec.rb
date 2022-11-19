@@ -27,7 +27,7 @@ RSpec.describe Book, "モデルに関するテスト", type: :model do
     end
     scenario "エラーメッセージは正しく表示されるか" do
       find("input[name='commit']").click
-      expect(page).to have_content ""
+      expect(page).to have_content "can't be blank"
     end
   end
   feature "bodyを空白で投稿した場合に画面にエラーメッセージが表示されているか" do
@@ -37,7 +37,7 @@ RSpec.describe Book, "モデルに関するテスト", type: :model do
     end
     scenario "エラーメッセージは正しく表示されるか" do
       find("input[name='commit']").click
-      expect(page).to have_content ""
+      expect(page).to have_content "can't be blank"
     end
   end
   
